@@ -1,0 +1,44 @@
+table{
+    border-spacing: 5px;
+}
+#header1, #header2, #header3{
+width: 207px;
+    height: 56px;
+    border: 1px blue solid;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+    
+}
+#col1, #col2, #col3{
+    width: 207px;
+    height: 260px;
+    border: 1px blue solid;
+    text-align: center;
+    vertical-align: super;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+td{
+    margin: 5px;
+}
+#header1{
+    
+    background-color: sienna;
+}
+#header2{
+    background-color: #77933c;
+}
+#header3{
+    background-color: #376092;
+}
+#col1{
+background-color:#fac090 ;
+}
+#col2{
+background-color:#c3d69b ;
+}
+#col3{
+background-color:#95b3d7 ;
+}

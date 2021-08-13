@@ -1,0 +1,54 @@
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8 {
+  width: 300px;
+  height: 20px;
+  border-width: 5px;
+}
+.item5,
+.item6,
+.item7,
+.item8 {
+  border-color: rgb(110, 177, 240);
+}
+.color {
+  color: coral;
+}
+.item1 {
+  border-style: solid;
+}
+.item2 {
+  border-style: dashed;
+}
+.item3 {
+  border-style: dotted;
+}
+.item4 {
+  border-style: double;
+}
+.item5 {
+  border-style: groove;
+}
+.item6 {
+  border-style: ridge;
+}
+.item7 {
+  border-style: inset;
+}
+.item8 {
+  border-style: outset;
+}

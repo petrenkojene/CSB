@@ -1,0 +1,64 @@
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.item1{
+    color: green;
+    font-size: 45px;
+    font-style: italic;
+    
+}
+.grey_1{
+    color: gray;
+}
+.item2{
+    background-color: green;
+    height: 40px;
+    width: auto;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    line-height: 35px;
+}
+.title{
+    margin-left: 5px;
+}
+.contener1, .contener2, .contener3{
+    display: flex;
+}
+
+.item3{
+    margin-top: 30px;
+    background-color: #ccc1bd;
+    width: 500px;
+}
+.img_1{
+    width: 500px;
+    height: 310px;
+}
+figcaption{
+    color: green;
+    text-align: center;
+}
+.item4{
+  width: 550px;
+    height: 290px;  
+}
+.new{
+    font-size: 35px;
+    font-style: italic;
+}
+.img_2{
+    width: 260px;
+    height: 150px;
+}
+.news{
+    width: 260px;
+    
+}
+.contener_1, .contener_2, .contener_3{
+    margin: 10px;
+}
+.prg{
+    height: 238px;
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    /* font-size: 0px; */
+}
+section{
+    overflow: auto;
+    width: 475px;
+}
+.item1{
+    background-color: rgb(100, 202, 203);
+    height: 55px;
+    width: 475px;
+
+}
+.item2{
+    background-color: rgb(250, 189, 185);
+    height: 25px;
+    width: 475px;
+}
+.item3{
+    width: 105px;
+    height: 210px;
+    background-color: #9cca9c;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0%;
+
+}
+.item4{
+    width:370px ;
+    height: 210px;
+    background-color: #cccfd0;
+    float: right;
+    margin: 0px 0px 0px 0px;
+}
+.item5{
+    height: 45px;
+    width: 475px;
+    background-color: #0466fc;
+
+}

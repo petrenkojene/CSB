@@ -1,0 +1,205 @@
+body{
+    display: flex;
+    margin: 0;
+    
+}
+.contener1{
+    width: 400px;
+    display: flex;
+    justify-content:center;
+    flex-flow: column;
+    /* align-items: center; */
+    margin-top: 40px;
+    color: #424243;
+    font-style: 'Lato';
+}
+.contener2{
+    display: flex;
+    
+    flex-flow: column;
+    margin-top: 70px;
+    color: #424243;
+}
+.myPhoto{
+position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50% 50% 50%;
+    margin: 0 0 0 0;
+    left:  50px;
+}
+.name{
+    width: 300px;
+    font-family: 'Montserrat';
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+.name_1{
+    text-align: center;
+    width: 270px;
+}
+.prof{
+    margin: 0%;
+    text-align: center;
+    width: 300px;
+}
+.cont1{
+    background-color: #bed8ec;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 40px;
+
+}
+.contact{
+    background-color: #424243;
+    width: 250px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+margin-top: -15px;
+}
+.contact1{
+    background-color: #424243;
+    width: 250px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+
+}
+.icons{
+    width: 15px;
+    height: 25px;
+    justify-content: center;
+    
+}
+.icons1{
+    width: 25px;
+    height: 15px;
+    justify-content: center;
+}
+.icons2{
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+}
+.icons3{
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+}
+.item1{
+    display: flex;
+    width: 250px;
+    align-items: center;
+    margin-left: 10px;
+}
+.text{
+    margin-left: 15px;
+}
+.lang{
+    margin-right: 35px;
+    margin-bottom: 0px;
+    
+}
+.lang1{
+    margin-right: 27px;
+    margin-bottom: 0px;
+}
+.lang2{
+    margin-right: 32px;
+    margin-bottom: 0px;
+}
+.lang3{
+    margin-right: 29px;
+    
+}
+.paint_black, .paint_white{
+width: 10px;
+height: 10px;
+margin: 5px;
+}
+.paint{
+    margin-top: 10px;
+}
+.cont2{
+    display: flex;
+    justify-content:space-between;
+    flex-flow: column;
+    align-items: center;
+}
+.hobby{
+    width: 250px;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin: 10px;
+}
+.text1{
+    width: 125px;
+    margin: 5px;
+}
+
+.icon_main{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+ 
+}
+.main1{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    margin: 12px 0 12px 0;
+}
+.main_list{
+    display: flex;
+    width: 690px;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+
+}
+.discript{
+   border-bottom: 1px solid #343334; 
+   width: 700px;
+  }
+.colum2{
+    padding-left: 15px ;
+    margin: 0%;
+}
+.list{
+margin: 0%;
+}
+.list1{
+    font-size: 12px;
+}
+.discr_list{
+    width: 690px;
+    padding: 0px 15px 0px 15px;
+    margin: 10px 0 10px 0;
+}
+.skills{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.dsrskills1{
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.dsrskills2{
+    margin-right: 67px;
+    margin-bottom: 5px;
+}
+.dsrskills3{
+    margin-right: 84px;
+    margin-bottom: 5px;
+}
+.dsrskills4{
+    margin-right: 22px;
+}

@@ -1,0 +1,23 @@
+p:first-child{
+  color: green;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+span:nth-child(2n+1){
+    color: indianred;
+    font-size: 25px;
+}
+p:last-child{
+    color: indigo;
+}
+.par1:hover{
+    color: lawngreen;
+    background-color: lightsalmon;
+}
+.par2::first-line{
+    color: maroon;
+}
+
+p::selection{
+    color: orangered;
+    background-color: rgb(21, 211, 170);
+}
