@@ -10,8 +10,30 @@
 <body>
     <form action="post">
         <fieldset>
-            <label for="firstname"></label>
-            <input type="text" id="firstname">
+            <legend>Personal information</legend>
+            <label for="firstname"><b><sup>*</sup> First name</b></label>
+            <input type="text" name="firstname" id="firstname">
+            <label for="middlename">Midlle name</label>
+            <input type="text" name="middlename" id="middlename">
+            <label for="lastname"><b><sup>*</sup> Last name</b></label>
+            <input type="text" name="lastname" id="lastname">
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+            <label for="sity">Sity or Towen </label>
+            <input type="text" name="sity" id="sity">
+            <label for="state">State</label>
+            <select name="state" id="state">
+                <option disabled selected>Chooce the State</option>
+                <option value="Kiev">Kiev</option>
+                <option value="Dnepr">Dnepr</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Vinitsya">Vinitsya</option>
+                 </select>
+                 <label for="zipcode"><b><sup>*</sup> Zip code</b></label>
+            <input type="text" name="zipcode" id="zipcode">
         </fieldset>
     </form>
 </body>
