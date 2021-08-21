@@ -39,7 +39,8 @@ border: 8px solid #54A6C8;
     width: 300px;
     height: 30px;
     border: 1px solid  #CFCFCF;
-    box-shadow: 0 0 10px gray;
+    outline: 8px solid #F3F6F7;
+    /* box-shadow: 0 0 10px gray; */
     margin-top: 25px;
 }
 .button{

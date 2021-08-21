@@ -1,43 +1,45 @@
 body{
+    width: 100%;
     display: flex;
     margin: 0;
     
 }
 .contener1{
-    width: 400px;
+    width: 60%;
     display: flex;
     justify-content:center;
     flex-flow: column;
     /* align-items: center; */
-    margin-top: 40px;
+    margin-top: 2%;
     color: #424243;
     font-style: 'Lato';
 }
 .contener2{
     display: flex;
-    
+    width: 60%;
     flex-flow: column;
     margin-top: 70px;
     color: #424243;
 }
 .myPhoto{
 position: relative;
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    /* height: 200px; */
     border-radius: 50% 50% 50% 50%;
     margin: 0 0 0 0;
-    left:  50px;
+    left:  70px;
 }
 .name{
-    width: 300px;
+    width: 50%;
     font-family: 'Montserrat';
     font-size: 25px;
     text-align: center;
-    margin: 0 0 0 0;
+    margin: 0 0 0 5%;
+
 }
 .name_1{
     text-align: center;
-    width: 270px;
+    width: 50%;
 }
 .prof{
     margin: 0%;
@@ -119,9 +121,10 @@ margin-top: -15px;
     
 }
 .paint_black, .paint_white{
-width: 10px;
-height: 10px;
+width: 8%;
+/* height: 10%; */
 margin: 5px;
+flex-shrink: 0;
 }
 .paint{
     margin-top: 10px;
