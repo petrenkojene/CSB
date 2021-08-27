@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        Замените условные конструкции на тернарный оператор где это возможно.
+    </pre>
+    <script>
+        let age = +prompt("Введите ваш возраст");
+        let technology = prompt("Ведите 1 или 2. 1 - JavaScript. 2 - C#");
+        let expirience = prompt("Введите опыт работы в годах.");
+
+        let adult, specialization, position;
+
+        if (age > 18)
+        {
+            adult = "совершеннолетний";
+        }
+        else
+        {
+            adult = "несовершеннолетний"
+        }
+
+        if (technology == 1)
+        {
+            specialization = "Frontend";
+        }
+        else
+        {
+            specialization = "Backend";
+        }
+
+        if (expirience == 0)
+        {
+            position = "Без опыта работы";
+        }
+        else if (expirience > 0 && expirience < 1.5)
+        {
+            position = "Junior";
+        }
+        else if (expirience > 1.5 && expirience < 3)
+        {
+            position = "Middle";
+        }
+        else if(expirience > 3)
+        {
+            position = "Senior";
+        }
+        else
+        {
+            position = "error";
+        }
+
+        let result = `Возраст: ${adult}\r\nСпециализация: ${specialization}\r\nПозиция: ${position}`;
+        alert(result);
+    </script>
+</body>
+
+</html>

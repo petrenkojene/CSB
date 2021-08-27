@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        Поменяйте switch на if...else. Поведение сценария, после изменений, должно остаться прежним (обратите внимание на значения USA и Great Britain).
+    </pre>
+    <script>
+        let country = prompt("введите название страны");
+
+        switch (country)
+        {
+            case "USA":
+            case "Great Britain":
+                alert("Английский язык");
+                break;
+            case "Germany":
+                alert("Немецкий язык");
+                break;
+            case "France":
+                alert("Французский язык");
+                break;
+
+            default:
+                alert("Указанной страны нет в списке");
+                break;
+
+        }
+    </script>
+</body>
+
+</html>
+
