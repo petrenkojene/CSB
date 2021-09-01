@@ -1,0 +1,21 @@
+.hero{    
+    display: flex;
+    justify-content: space-around;
+}
+.badboys{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+.boss{
+    display: flex;
+    justify-content: center;
+}
+.item1{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+figure{
+    margin: 0;
+}

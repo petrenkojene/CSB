@@ -41,11 +41,21 @@
       let totalPriceProduct3 = productPrice3 * productQuantity3;
 
       let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
-      if (total < 500) {
-        console.log("У Вас сумма покупки меньше 500, скидки нет");
-      } else if (total >= 500) {
-        console.log();
+      let scidka = 0;
+      if (total >= 500 && total < 1000) {
+        scidka = total * 0.05;
+        total = total - scidka;
+        console.log(`"Скидка 5%"    ${scidka}`);
+      } else if (total >= 1000 && total < 1500) {
+        scidka = total * 0.1;
+        total = total - scidka;
+        console.log(`"Скидка 10%"    ${scidka}`);
+      } else {
+        scidka = total * 0.15;
+        total = total - scidka;
+        console.log(`"Скидка 15%"    ${scidka}`);
       }
+
       console.log(
         `Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`
       );
@@ -55,13 +65,14 @@
       console.log(
         `Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`
       );
+      if (total < 1500) {
+        let shipping = confirm("Заказываете доставку курьером?");
 
-      let shipping = confirm("Заказываете доставку курьером?");
-      if (shipping) {
-        total += 40;
-        console.log("Доставка 40");
+        if (shipping) {
+          total += 40;
+          console.log("Доставка 40");
+        }
       }
-
       console.log("Всего " + total);
     </script>
   </body>
