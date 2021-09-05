@@ -1,7 +1,7 @@
 .hero{    
     display: flex;
     justify-content: space-around;
-}
+    }
 .badboys{
     display: flex;
     justify-content: center;

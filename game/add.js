@@ -60,42 +60,21 @@ function shopOb() {
       alert("Вы ничего не выбрали");
   }
 }
-function batleCaterpillar() {
-  let batle = caterpillar.health / kopatuch.damage;
-  let damage = kopatuch.health / caterpillar.damage;
-  console.log(batle);
-  console.log(damage);
+
+function batleCaterpillar(zlodey) {
+  let batle = zlodey.health / kopatuch.damage;
+  let damage = kopatuch.health / zlodey.damage;
 
   if (batle > damage) {
     alert("Вы проиграли");
-  } else {
+  } else if (zlodey == caterpillar) {
     alert("Победа");
     kopatuch.health = kopatuch.health + 10;
     kopatuch.money += 10;
-  }
-}
-function batleColoradoBeatle() {
-  let batle = coloradoBeatle.health / kopatuch.damage;
-  let damage = kopatuch.health / coloradoBeatle.damage;
-  console.log(batle);
-  console.log(damage);
-
-  if (batle > damage) {
-    alert("Вы проиграли");
-  } else {
+  } else if (zlodey == coloradoBeatle) {
     alert("Победа");
     kopatuch.damage = kopatuch.damage + 10;
     kopatuch.money += 15;
-  }
-}
-function batleLocust() {
-  let batle = locust.health / kopatuch.damage;
-  let damage = kopatuch.health / locust.damage;
-  console.log(batle);
-  console.log(damage);
-
-  if (batle > damage) {
-    alert("Вы проиграли");
   } else {
     alert("Победа! БОСС ПОВЕРЖЕН");
     kopatuch.health = kopatuch.health + 10;

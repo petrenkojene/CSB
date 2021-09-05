@@ -260,15 +260,16 @@ let ar16_even = [];
 function f16() {
   for (let i = 0; i < ar16.length; i++) {
     if (ar16[i] % 2 == 0) {
-      document.querySelector(".out-16-even").innerHTML += ar16_odd.push(
-        ar16[i]
-      );
+      let out = "";
+      out += ar16_odd.push(ar16[i] + " ");
+      document.querySelector(".out-16-even").innerHTML = ar16_odd;
     } else {
-      document.querySelector(".out-16-odd").innerHTML += ar16_odd.push(ar16[i]);
+      let out = "";
+      out += ar16_even.push(ar16[i] + " ");
+      document.querySelector(".out-16-odd").innerHTML = ar16_even;
     }
   }
 }
-
 document.querySelector(".b-16").onclick = f16;
 
 // Task 17
@@ -279,7 +280,14 @@ document.querySelector(".b-16").onclick = f16;
 
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
-function f17() {}
+function f17() {
+  let count = 1;
+  for (let i = 0; i < ar17.length; i++) {
+    if (ar17[i] > 3) {
+      document.querySelector(".out-17").innerHTML = count++;
+    }
+  }
+}
 
 document.querySelector(".b-17").onclick = f17;
 
@@ -291,7 +299,15 @@ document.querySelector(".b-17").onclick = f17;
 
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
-function f18() {}
+function f18() {
+  let max = ar18[0];
+  for (let i = 0; i < ar18.length; i++) {
+    if (ar18[i] > max) {
+      max = ar18[i];
+      document.querySelector(".out-18").innerHTML = max;
+    }
+  }
+}
 
 document.querySelector(".b-18").onclick = f18;
 
@@ -303,8 +319,18 @@ document.querySelector(".b-18").onclick = f18;
 
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
-function f19() {}
+function f19() {
+  let min = ar19[0];
+  for (let i = 0; i < ar19.length; i++) {
+    if (ar19[i] < min) {
+      min = ar19[i];
+      let index = ar19.indexOf(min);
 
+      document.querySelector(".out-19").innerHTML = index;
+      console.log(min);
+    }
+  }
+}
 document.querySelector(".b-19").onclick = f19;
 
 // Task 20
@@ -315,6 +341,12 @@ document.querySelector(".b-19").onclick = f19;
 
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
-function f20() {}
+function f20() {
+  let a = 0;
+  for (let i = 0; i < ar20.length; i++) {
+    a += ar20[i];
+    document.querySelector(".out-20").innerHTML = a;
+  }
+}
 
 document.querySelector(".b-20").onclick = f20;
