@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <pre>
+        Задание:
+        Дано массив. Найдите среднее арифметическое для значений этого массива. 
+        Выведите на экран только те элементы, которые больше этого среднего арифместического значения
+    </pre>
+    <script>
+      let values = [
+        10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28,
+      ];
+      let sum = 0;
+      let a = 0;
+      let average;
+      let m = [];
+      for (i = 0; i < values.length; i++) {
+        sum += values[i];
+
+        average = sum / values.length;
+      }
+      for (i = 0; i < values.length; i++) {
+        if (values[i] > average) {
+          let out = "";
+          out += m.push(values[i]);
+        }
+      }
+
+      alert(m.join(" "));
+    </script>
+  </body>
+</html>

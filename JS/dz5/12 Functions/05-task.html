@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task X</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Задание:
-        Запросите у пользователя чилсо. Выведите все числа в обрантом поряке от введенного пользователем значения до 1. Используйте для решения рекурсию.
+        Запросите у пользователя число. Выведите все числа в обрантом поряке от введенного пользователем значения до 1. Используйте для решения рекурсию.
     </pre>
     <script>
-        
+      let curentNumber = 1 + +prompt("enter number");
+      function counter(curentNumber) {
+        curentNumber--;
+        console.log(curentNumber);
+        if (curentNumber > 1) {
+          counter(curentNumber);
+        }
+      }
+      counter(curentNumber);
     </script>
-</body>
+  </body>
 </html>

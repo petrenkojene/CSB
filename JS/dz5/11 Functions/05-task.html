@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 5</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Задание:
         Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
     </pre>
     <script>
-        
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let arr1 = [];
+      let nullNumber = null;
+      function double() {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+              arr1.push(arr[i]);
+            }
+            if (arr1.length == 0) {
+              arr1.push(nullNumber);
+            }
+          }
+        }
+      }
+      double();
+      console.log(arr1);
     </script>
-</body>
+  </body>
 </html>
