@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Push</button>
+    <script>
+      function showParagraph() {
+        let btn = document.querySelector(".btn");
+        let count = 0;
+        btn.onclick = function () {
+          count++;
+          if (count < 11) {
+            let p = document.createElement("p");
+            p.classList.add("item");
+            p.innerHTML = "Lorem";
+            document.body.append(p);
+          } else {
+            let out = document.querySelectorAll(".item");
+            out.forEach((e) => e.remove());
+          }
+        };
+      }
+
+      showParagraph();
+    </script>
+  </body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 2</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Задание:
         Создайте два объекта используя конструктор и литерал. Оба объекта должны содержать свойства firstName и lastName
@@ -13,7 +13,22 @@
         lastName и firstName полученного объекта на экран.
     </pre>
     <script>
-        
+      let student = new Object();
+      student.firstName = "Jene";
+      student.lastName = "Petrenko";
+      let student2 = {
+        firstName: "Nastya",
+        lastName: "Pupkina",
+      };
+      function name(stud) {
+        alert(
+          `student \n firstName ${stud.firstName} \n lastname ${stud.lastName}`
+        );
+      }
+      name(student);
+      name(student2);
+      console.table(student);
+      console.table(student2);
     </script>
-</body>
+  </body>
 </html>
