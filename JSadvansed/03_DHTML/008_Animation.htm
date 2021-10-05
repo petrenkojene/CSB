@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Простая анимация</title>
+
+    <script>
+      let div1;
+      let leftPos = window.innerWidth - 50;
+      labl1: window.onload = function () {
+        div1 = document.getElementById("div1");
+        setInterval(animate, 10);
+      };
+
+      function animate() {
+        div1.style.left = leftPos + "px";
+        leftPos -= 1;
+
+        if (leftPos == 0) {
+          setInterval(animate1, 10);
+          return (leftPos = 1);
+          function animate1() {
+            div1.style.left = leftPos + "px";
+            leftPos += 1;
+            if (leftPos > window.innerWidth - 50) {
+              setInterval(animate, 10);
+              return (leftPos = window.innerWidth - 50);
+            }
+          }
+        }
+      }
+      console.log(leftPos);
+    </script>
+  </head>
+
+  <body>
+    <div
+      id="div1"
+      style="
+        height: 30px;
+        width: 30px;
+        background-color: Green;
+        position: relative;
+      "
+    ></div>
+  </body>
+</html>

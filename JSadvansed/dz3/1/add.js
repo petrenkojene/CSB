@@ -1,17 +1,15 @@
 let paragraphe = {};
 paragraphe.text = "PARAGRAPH";
 paragraphe.chengeText = function () {
-  let out = document.getElementsByTagName("p");
-  for (item of out) {
-    item.innerHTML = this.text;
-  }
+  let out = document.querySelectorAll("p");
+  out.forEach((e) => (e.innerHTML = this.text + "<br>"));
+  console.log(out);
 };
 paragraphe.chengeText();
 
 (function () {
   let text = "PARAGRAPHE";
-  let out = document.getElementsByTagName("span");
-  for (item of out) {
-    item.innerHTML = text + "<br>";
-  }
+  let out = document.querySelectorAll(".item");
+  out.forEach((e) => (e.innerHTML = text + "<br>"));
+  console.log(out);
 })();

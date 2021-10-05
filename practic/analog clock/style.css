@@ -1,0 +1,110 @@
+body{
+background-color: cadetblue ;
+font-family: 'Orbitron', sans-serif;
+font-size: 28px;
+color: #39ff14;
+}
+.clock{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.hoursAll{
+    display: flex;
+justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 25%;
+}
+.hours{
+display: flex;
+justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    width: 15px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 25;
+    bottom:  175px;
+     
+    
+}
+.minutesAll{
+    display: flex;
+justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 25%;
+}
+.minutes{
+display: flex;
+justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    width: 15px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 25;
+    bottom:  235px;
+   
+    
+    
+}
+.secondsAll{
+    display: flex;
+justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    border-radius: 25%;
+}
+.seconds{
+display: flex;
+justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    width: 15px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 60;
+    bottom:  275px;
+
+     
+    
+    
+}
+.circle{
+    display: flex;
+justify-content: center;
+ align-items: center; 
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+}
+.time{
+    width: 100px;
+    background-color: rgb(140, 207, 140);
+}
+button{
+    width: 100px;
+    border-radius: 5%;
+    border-color: rgb(36, 85, 87);
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+

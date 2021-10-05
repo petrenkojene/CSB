@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Метод test()</title>
+    <script>
+        // Метод test возвращает true если метод exec возвращает не null;
+        let pattern = /\d\d\d/;
+
+        let input = "hello world";
+        if (pattern.test(input)) {
+            document.write("Строка " + input + " соответствует шаблону<br />");
+        }
+        else {
+            document.write("Строка " + input + " НЕ соответствует шаблону<br />");
+        }
+
+        input = "123";
+        if (pattern.test(input)) {
+            document.write("Строка " + input + " соответствует шаблону<br />");
+        }
+        else {
+            document.write("Строка " + input + " НЕ соответствует шаблону<br />");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

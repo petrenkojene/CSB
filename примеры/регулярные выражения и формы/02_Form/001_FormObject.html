@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Работа с HTML формой</title>
+    <script>
+        window.onload = function() {
+            let f = document.forms[0]; // получение первой формы на странице.
+
+            f.elements[0].value = "text"; // изменение первого по счету поля ввода в форме.
+            f.elements[1].value = "text";
+            f.elements[2].value = "text";
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Имя <input type="text" value=" " /><br /> Фамилия
+        <input type="text" value=" " /><br /> Возраст
+        <input type="text" value=" " /><br />
+        <input type="button" value="Регистрация" />
+    </form>
+</body>
+
+</html>

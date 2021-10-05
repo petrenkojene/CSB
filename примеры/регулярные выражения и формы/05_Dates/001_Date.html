@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date</title>
+</head>
+
+<body>
+
+    <script>
+        let now = new Date(); // Текущая дата и время
+        document.write("<strong>Now = </strong>" + now + "<br />");
+
+        let now1 = new Date(5000); // Объекты даты Date основываются на значении количества миллисекунд, прошедших с 1 января 1970 года в часовом поясе UTC.
+        document.write("<strong>date1 = </strong>" + now1 + "<br />");
+
+        let date = new Date("December 25, 2020");
+        document.write("<strong>date2 = </strong>" + date + "<br />");
+
+        let date2 = new Date("03/09/2019"); // March 9 2019 
+        document.write("<strong>date3 = </strong>" + date2 + "<br />");
+
+        // Date(year, month, day, hour, minute, second, millisecond)
+        let date3 = new Date(2021, 2, 9, 22, 10); // March 9  2021
+        document.write("<strong>date4 = </strong>" + date3 + "<br />");
+    </script>
+
+</body>
+
+</html>

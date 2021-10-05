@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Простая анимация цвета</title>
+</head>
+<body>
+
+    <div id="rect">
+    </div>
+
+    <script>
+        let e = document.getElementById("rect");
+
+        e.style.width = "100px";
+        e.style.height = "100px";
+        e.style.border = "solid black 5px";
+
+        let colors = ["white", "yellow", "orange", "red"]
+        let nextColor = 0;
+
+        // Вызов следующей функции каждые 500 миллисекунд для анимации цвета.
+        setInterval(function () {
+            e.style.backgroundColor = colors[nextColor++ % colors.length];
+        }, 500);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Метод match</title>
+    <script>
+        // match() - принимает регулярное выражение и возвращает массив с результатами поиска.
+        let text = "1 плюс 2 равно 3";
+        let res = text.match(/\d/g); // возвращает массив ['1', '2', '3']
+        document.write(res);
+
+        let text2 = "Текст 123 для тестирования примера";
+        let res2 = text2.match(/\d\d\d/);
+
+        document.write("<br />res2[0] = " + res2[0]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

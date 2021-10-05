@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Метод exec()</title>
+    <script>
+        // Метод exec работает точно так же как и метод match типа данных string.
+        // Но всегда возвращает только одно значение или null
+        // При глобальном поиске (флаг g) метод возвращает найденную подстроку и продолжает поиск далее по строке.
+        let test = "Строка №2 для тестирования примера с регулярными выражениями в файле 6_RegExMethods_exec.htm";
+        let pattern = /\d/g;
+
+        let res;
+        while ((res = pattern.exec(test)) != null) {
+            alert("Найдено " + res + " в позиции " 
+            + res.index + ". Следующий поиск начнется с индекса " + pattern.lastIndex);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
