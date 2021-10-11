@@ -1,0 +1,43 @@
+.nav_main{
+font-size: 0%;
+display: grid;
+justify-content: center;
+grid-template-columns:220px repeat(9,120px) ;
+}
+.nav{
+    display: grid;
+    width: 120px;
+    height: 50px;
+    background-color:#96D352;
+    font-size: 18px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav1{
+    color: #96D352;
+    font-size:66px;
+}
+.nav2{
+    color: #c7c7c7;
+    font-size:36px;
+}
+.nav_figcaption{
+    background-color: #95D249;
+    color: white;
+    font-size: 18px;
+}
+.main_menu{
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    justify-content: center;
+    
+
+}
+.palma{
+    display: grid;
+    justify-content: center;
+}
