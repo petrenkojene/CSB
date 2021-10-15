@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>audio</title>
+    <script>
+        window.onload = function () {
+            let $ = function (id) {
+                return document.getElementById(id);
+            }
+            let audio = $("player");
+            
+            $("play").onclick = function () {
+                audio.play();
+            //Длительность ауидо в секундах
+                console.log(audio.duration);    
+            }
+            $("pause").onclick = function () {
+                audio.pause()
+                //текущее время аудиодорожки
+                if (audio.currentTime > 5) {
+                    audio.pause();
+                    alert("Вы прослушали пробную версию. Для того, чтобы прослушать всю дорожку - зарегистрируйтесь")
+                    $("play").setAttribute("disabled","disabled")
+                    $("muteOn").setAttribute("disabled", "disabled")
+                    $("muteOff").setAttribute("disabled", "disabled")
+                }
+            }
+            $("muteOn").onclick = function () {
+                audio.volume+=0.1
+            }
+            $("muteOff").onclick = function () {
+                audio.volume -=0.1
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p>Загрузилась песня группы Ария - "Потерянный Рай"</p>
+    <audio id="player">
+        <source src="audio/aria.mp3" />
+    </audio>
+    <div>
+        <button id="play">Воспроизведение</button>
+        <button id="pause">Пауза</button>
+        <button id="muteOn">Громкость +</button>
+        <button id="muteOff">Громкость -</button>
+    </div> 
+</body>
+</html>

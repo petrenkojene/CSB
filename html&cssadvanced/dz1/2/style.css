@@ -1,0 +1,15 @@
+.train{
+    width: 100%;
+    height: 300px;
+}
+.item1{
+    display: inline-block;
+    position: relative;
+}
+.text{
+    top: 230px;
+    position: absolute;
+    
+    background-color: rgba(235, 223, 224, 0.5);
+    
+}

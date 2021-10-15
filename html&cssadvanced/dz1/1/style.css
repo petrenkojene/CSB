@@ -1,0 +1,84 @@
+.main{
+    width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav_main{
+font-size: 0%;
+display: grid;
+justify-content: center;
+grid-template-columns:160px repeat(8,auto) ;
+
+}
+.nav{
+    display: grid;
+    width: 90px;
+    height: 50px;
+    background-color:#96D352;
+    font-size: 16px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav1{
+    color: #96D352;
+    font-size:56px;
+}
+.nav2{
+    color: #c7c7c7;
+    font-size:36px;
+}
+.nav_figcaption{
+    background-color: #95D249;
+    color: white;
+    font-size: 18px;
+}
+.main_menu{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    
+
+}
+.palma{
+    display: grid;
+    justify-content: center;
+}
+.picture_palma{
+    width: 100%;
+}
+.description{
+    padding: 20px 50px 0 0 ;
+}
+.heading1, .item1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.text{
+    font-size: 18px;
+}
+.heading1,.text, .item1, .title{
+    color: #909090;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 0 0 0 50px;
+    
+}
+.item1{
+    grid-column: 1/6;
+}
+p{
+    margin: 5px 0 5px 0;
+}
+.title, .bold{
+    font-weight: bold;
+}
+.descr{
+    font-size: 12px;
+}

@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video element</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript">
+      window.onload = function () {
+        let $ = function (id) {
+          return document.getElementById(id);
+        };
+        let v = $("video");
+
+        $("rewaindForward").onclick = function () {
+          v.currentTime += 5; //Перемотка в перед на 5 секунд
+        };
+
+        $("rewaindBack").onclick = function () {
+          v.currentTime -= 5; //Перемотка назад на 5 секунд
+        };
+
+        $("stopButton").onclick = function () {
+          v.pause();
+          v.currentTime = 0;
+          $("playButton").src = "img/icons8_play.png";
+        };
+        $("fullButton").onclick = function () {
+          let elem = $("video");
+          //Метод requestFullscreen() используется для отображение елемента во весь экран
+
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+          } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+          }
+        };
+
+        $("playButton").onclick = function (e) {
+          let rewind = $("rewind");
+          // console.log(rewind.value);
+          if (v.paused) {
+            v.play();
+            let interval = setInterval(() => {
+              rewind.value = (v.currentTime * 100) / v.duration;
+              showTime();
+            }, 0);
+
+            e.target.src = "img/icons8-pause.png";
+          } else {
+            v.pause();
+
+            e.target.src = "img/icons8_play.png";
+          }
+        };
+
+        $("volume").oninput = function (e) {
+          v.volume = 0;
+          v.volume += e.target.value / 10;
+          // console.dir(v);
+        };
+        function showTime() {
+          let clock = document.querySelector(".clock");
+          let seconds = Math.floor(v.currentTime * 100) / 100;
+          if (seconds < 10) {
+            seconds = `0${seconds}`;
+          }
+
+          clock.innerHTML = seconds;
+          if (v.currentTime == v.duration) {
+            clearInterval(interval);
+          }
+        }
+        $("rewind").oninput = function (e) {
+          v.currentTime = 0;
+          let rewind = (e.target.value * v.duration) / 100;
+          v.currentTime += rewind;
+          let interval = setInterval(() => {
+            e.target.value = (v.currentTime * 100) / v.duration;
+            showTime();
+          }, 0);
+        };
+      };
+    </script>
+    <style>
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        float: left;
+        margin-left: 5px;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      .player {
+        position: absolute;
+        top: 100px;
+        left: 320px;
+        width: auto;
+        height: auto;
+      }
+
+      #video {
+        height: 400px;
+        width: 710px;
+        border: 2px solid #127274;
+        position: relative;
+      }
+      /* media-controls - пседоэлемент для контроля в полноэкранном режиме (убирает элементы контроля)*/
+      #video::-webkit-media-controls {
+        display: none !important;
+      }
+
+      .contrls {
+        position: relative;
+        top: -4px;
+        width: auto;
+        border: 2px solid #127274;
+        height: 40px;
+        background-color: #d6e5e5;
+      }
+
+      #fullButton {
+        float: right;
+      }
+      #volume {
+        position: absolute;
+        float: right;
+        left: 530px;
+        bottom: 10px;
+      }
+      #rewind {
+        width: 715px;
+        position: absolute;
+        float: right;
+        left: -5px;
+        bottom: 33px;
+      }
+      .clock {
+        font-family: "Orbitron", sans-serif;
+        font-size: 16px;
+        color: rgb(4, 92, 61);
+        position: absolute;
+        float: left;
+        left: 330px;
+        bottom: -5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <video id="video">
+        <source src="video/vsvideo.mp4" />
+        <source src="video/vsvideo.ogg" />
+        <source src="video/vsvideo.webm" />
+      </video>
+      <div class="contrls">
+        <p class="clock"></p>
+        <div>
+          <input
+            type="range"
+            name="rewind"
+            id="rewind"
+            min="0"
+            max="100"
+            value="0"
+          />
+        </div>
+        <div>
+          <input
+            type="range"
+            name="volume"
+            id="volume"
+            min="0"
+            max="10"
+            value="5"
+          />
+        </div>
+        <div>
+          <img id="playButton" src="img/icons8_play.png" />
+        </div>
+        <div>
+          <img id="rewaindBack" src="img/icons8-prev.png" />
+        </div>
+        <div>
+          <img id="rewaindForward" src="img/icons8-next.png" />
+        </div>
+        <div>
+          <img id="stopButton" src="img/icons8-stop.png" />
+        </div>
+
+        <div>
+          <img id="fullButton" src="img/icons8-full.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!--autoplay - логический атрибут, если true - то видео начнет воспроизводится автоматически,
+        после загрузки страницы
+        controls - браузер отобразит элементы управления, чтобы позволить пользователю
+        управлять воспроизведением видео, регулировать громкость, осуществлять перемотку,
+        а также ставить на паузу и возобновление воспроизведение.
+        muted - атрибут, который определяет значение по умолчания для звуковой дорожки,
+        если атрибут указан, то аудио дорожка воспроизводиться не будет.
+        poster - URL-адрес, указывающий на постер, который будет использован,
+        пока загружается видео или пока пользователь не нажмет на кнопку воспроизведения.
+        Если этот атрибут не указан, ничего не отображается до тех пор,
+        пока не будет доступен первый кадр
+        playbackRate - свойство, указывающее уровень скорости воспроизведения.-->
+    <video width="600" height="400" poster="img/poster.png" controls>
+        <source src="video/vsvideo.mp4" type="video/mp4">
+        <source src="video/vsvideo.ogg" type="video/ogg">
+        <source src="video/vsvideo.webm" type="video/webm">
+        Ваш браузер не поддерживает Video HTML5
+    </video>
+    <p>
+        <button id="towards">Увеличить скорость воспроизведения</button>
+        <button id="backwards">Уменьшить скорость вопроизведения</button>
+    </p>
+    <script>
+        let video = document.querySelector("video");
+        let towards = document.querySelector("#towards")
+        let backwards = document.querySelector("#backwards");
+        towards.onclick = function () {
+            video.playbackRate += 0.1
+
+        }
+        backwards.onclick = function () {
+            video.playbackRate -= 0.1
+
+        }
+    </script>
+</body>
+
+</html>
