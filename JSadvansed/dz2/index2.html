@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Human {
+        constructor(firstName, lastName, age, work) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.age = age;
+          this.work = work;
+          this.profession = function () {
+            document.write(`profession ${this.work} <br>`);
+          };
+        }
+        showName() {
+          document.write(
+            `Name:  ${this.firstName}<br> LastName:  ${this.lastName} <br>`
+          );
+        }
+      }
+      let student = new Human("Jane", "Petrenko", 27, "student");
+      let admin = new Human("Nick", "Nickovich", 38, "sisadmin");
+      let worker = new Human("Pavel", "Pavlov", 29, "miner");
+      student.showName();
+      student.profession();
+      admin.showName();
+      admin.profession();
+      worker.showName();
+      worker.profession();
+      console.log(student);
+    </script>
+  </body>
+</html>

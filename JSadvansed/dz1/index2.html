@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [];
+      
+      
+      
+      function User(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+               
+        
+        }
+           
+      arr.push(new User("Ivan", "Ivanov", 27));
+      arr.push(new User("Peter", "Petreov", 32))
+      arr.push(new User("Nick", "Nickovich", 48))
+      arr.push(new User("Max", "Maxsovich", 15))
+    
+    
+    function sortArr(item){
+      return(a,b) =>a[item]<b[item]?1:-1;
+    }
+    arr.sort(sortArr('age'))
+    arr.forEach(user=>document.write(' ' +user.age + ' '))
+    console.log(arr);
+    
+      
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="item1"><input type="text" class="inp1" /></div>
+      <div class="item2"><input type="password" name="" id="pass" /></div>
+      <div class="item">
+        <label for="check">Запомнить меня</label>
+        <input type="checkbox" name="" id="check" />
+      </div>
+      <div class="item">
+        <button class="btn">Вход</button>
+        <p></p>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".btn").onclick = function () {
+        let par = document.querySelector("p");
+
+        let inputText = document.querySelector(".inp1");
+        let pass = document.getElementById("pass");
+
+        if (inputText.value == "" && pass.value == "") {
+          inputText.style.backgroundColor = "red";
+          pass.style.backgroundColor = "red";
+          par.innerHTML = "Вы не заполнили поля логин и пароль";
+        }
+        if (inputText.value == "admin" && pass.value == "12345") {
+          inputText.style.backgroundColor = "green";
+          pass.style.backgroundColor = "green";
+          par.innerHTML = "Вы авторизированы";
+        }
+      };
+    </script>
+  </body>
+</html>

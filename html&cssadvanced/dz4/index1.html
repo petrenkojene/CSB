@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        padding: 50px 0 0 50px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        margin: 0%;
+        padding: 0%;
+      }
+      img {
+        width: 600px;
+        border-radius: 5%;
+      }
+      button {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://wallpage.ru/imgbig/wallpapers_69671.jpg"
+      alt="nebo"
+      class="item1"
+    />
+    <div class="container">
+      <button class="btn1 btn btn-success">Chang 1</button>
+      <button class="btn2 btn btn-success">Chang 2</button>
+      <button class="btn3 btn btn-success">Chang 3</button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.querySelector(".btn1").addEventListener("click", function () {
+        img.src = "https://wallpage.ru/imgbig/wallpapers_69667.jpg";
+      });
+      document.querySelector(".btn2").addEventListener("click", function () {
+        img.src =
+          "https://oboi.ws/wallpapers/11_9578_oboi_nyan_cat_1280x1024.jpg";
+      });
+      document.querySelector(".btn3").addEventListener("click", function () {
+        img.src = "https://wallpage.ru/imgbig/wallpapers_69671.jpg";
+        alt = "nebo";
+      });
+      let img = document.querySelector(".item1");
+    </script>
+  </body>
+</html>

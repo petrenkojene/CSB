@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>Push me</button>
+    <p></p>
+    <script>
+      let min = 1;
+      let max = 100;
+      let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      let guessNumber = function () {
+        let currentNumber = document.querySelector("input").value;
+        let par = document.querySelector("p");
+        let msg = "";
+        if (currentNumber > randomNumber) {
+          msg = "Ваше число больше загадоного";
+          par.innerHTML = msg;
+          document.querySelector("input").value = "";
+        } else if (currentNumber < randomNumber) {
+          msg = "Ваше число меньше загадоного";
+          par.innerHTML = msg;
+          document.querySelector("input").value = "";
+        } else {
+          msg = "Вы угадали число";
+          par.innerHTML = msg;
+        }
+      };
+
+      document.querySelector("button").onclick = guessNumber;
+      console.log(randomNumber);
+    </script>
+  </body>
+</html>

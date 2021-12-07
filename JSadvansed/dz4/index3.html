@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Fruktur:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Henny+Penny:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Kiwi+Maru:300,regular,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Kufam:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Griffy:regular" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+      .item1,
+      .item2,
+      .item3 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 50%;
+      }
+      .item1 {
+        background-color: #234565;
+      }
+      .item2 {
+        background-color: #654321;
+      }
+      .item3 {
+        background-color: #345621;
+      }
+      
+      div {
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        font-family: 'Griffy';
+        position: absolute;
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    
+      <div class="par1">H</div>
+      <div class="par2">А</div>
+      <div class="par3">С</div>
+      <div class="par4">Т</div>
+      <div class="par5">Я</div>
+    </div>
+    <script>
+      window.onload = function(){
+      let div1 = document.querySelector(".item1");
+      let div2 = document.querySelector(".item2");
+      let div3 = document.querySelector(".item3");
+      let mainBody = document.querySelector("body");
+      let par1 = document.querySelector(".par1");
+      let par2 = document.querySelector(".par2");
+      let par3 = document.querySelector(".par3");
+      let par4 = document.querySelector(".par4");
+      let par5 = document.querySelector(".par5");
+      
+
+      setInterval(animate, 400);
+
+      function animate() {
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let arr2 = ['Kiwi Maru','Fruktur','Henny Penny','Kufam','Griffy']
+        
+        let item1 = arr[Math.floor(Math.random() * arr.length)];
+        let item2 = arr[Math.floor(Math.random() * arr.length)];
+        let item3 = arr[Math.floor(Math.random() * arr.length)];
+        let item4 = arr[Math.floor(Math.random() * arr.length)];
+        let item5 = arr[Math.floor(Math.random() * arr.length)];
+        let item6 = arr[Math.floor(Math.random() * arr.length)];
+        let font1 = arr2[Math.floor(Math.random() * arr2.length)];
+        let font2 = arr2[Math.floor(Math.random() * arr2.length)];
+        let font3 = arr2[Math.floor(Math.random() * arr2.length)];
+        let font4 = arr2[Math.floor(Math.random() * arr2.length)];
+        let font5 = arr2[Math.floor(Math.random() * arr2.length)];
+        
+        mainBody.style.backgroundColor = `#${item1}${item2}${item3}${item4}${item5}${item6}`;
+        let maxHeight = innerHeight - 300;
+        let maxWidth = innerWidth - 150;
+        let min = 0;
+        
+        let randomHeight1 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth1 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        div1.style.left = randomWidth1 + "px";
+        div1.style.top = randomHeight1 + "px";
+        div1.style.backgroundColor = `#${item2}${item5}${item1}${item4}${item6}${item3}`;
+        div1.style.borderRadius  = `${item1}${item2}%`
+
+        let randomHeight2 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth2 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        div2.style.left = randomWidth2 + "px";
+        div2.style.top = randomHeight2 + "px";
+        div2.style.backgroundColor = `#${item6}${item5}${item4}${item3}${item2}${item1}`;
+div2.style.borderRadius  = `${item3}${item4}%`
+
+        let randomHeight3 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth3 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        div3.style.left = randomWidth3 + "px";
+        div3.style.top = randomHeight3 + "px";
+        div3.style.backgroundColor = `#${item3}${item6}${item1}${item4}${item2}${item5}`;
+div3.style.borderRadius  = `${item5}${item6}%`
+        let randomHeight4 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth4 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        par1.style.left = randomWidth4 + "px";
+        par1.style.top = randomHeight4 + "px";
+        par1.style.color = `#${item1}${item4}${item6}${item5}${item2}${item3}`;
+        par1.style.fontSize = `${item1}${item6}px`;
+        par1.style.transform = `rotate(${item1}${item2}${item6}deg)`;
+        par1.style.fontFamily = `${font1}`;
+
+        let randomHeight5 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth5 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        par2.style.left = randomWidth5 + "px";
+        par2.style.top = randomHeight5 + "px";
+        par2.style.color = `#${item3}${item2}${item6}${item5}${item4}${item1}`;
+        par2.style.fontSize = `${item2}${item6}px`;
+        par2.style.transform = `rotate(${item2}${item5}${item6}deg)`;
+        par2.style.fontFamily = `${font2}`;
+
+
+        let randomHeight6 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+
+        let randomWidth6 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        par3.style.left = randomWidth6 + "px";
+        par3.style.top = randomHeight6 + "px";
+        par3.style.color = `#${item6}${item5}${item1}${item2}${item3}${item5}`;
+        par3.style.fontSize = `${item4}${item3}px`;
+        par3.style.transform = `rotate(${item4}${item1}${item6}deg)`;
+        par3.style.fontFamily = `${font3}`;
+        let randomHeight7 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+
+        let randomWidth7 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        par4.style.left = randomWidth7 + "px";
+        par4.style.top = randomHeight7 + "px";
+        par4.style.color = `#${item3}${item1}${item6}${item4}${item2}${item5}`;
+        par4.style.fontSize = `${item1}${item5}px`;
+        par4.style.transform = `rotate(${item1}${item6}${item5}deg)`;
+        par4.style.fontFamily = `${font4}`;
+
+        let randomHeight8 =
+          Math.floor(Math.random() * (maxHeight - min + 1)) + min;
+        let randomWidth8 =
+          Math.floor(Math.random() * (maxWidth - min + 1)) + min;
+        par5.style.left = randomWidth8 + "px";
+        par5.style.top = randomHeight8 + "px";
+        par5.style.color = `#${item4}${item6}${item1}${item3}${item2}${item5}`;
+        par5.style.fontSize = `${item2}${item3}px`;
+        par5.style.transform = `rotate(${item4}${item5}${item1}deg)`;
+        par5.style.fontFamily = `${font5}`;
+
+        
+        
+      }
+      
+    }
+      
+    </script>
+  </body>
+</html>

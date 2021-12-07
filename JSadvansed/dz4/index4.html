@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .itemDiv {
+        width: 300px;
+        position: absolute;
+      }
+      button {
+        z-index: 20;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="item1">UP</button>
+    <button class="item2">DOWN</button>
+    <button class="item3">LEFT</button>
+    <button class="item4">RIGHT</button>
+    <div class="itemDiv">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, ab
+      inventore. Atque provident quibusdam necessitatibus suscipit perferendis,
+      ratione magni quisquam, omnis ad, incidunt similique sequi excepturi ex
+      iure qui neque.
+    </div>
+    <script>
+      let div = document.querySelector(".itemDiv");
+      let up = document.querySelector(".item1");
+      let down = document.querySelector(".item2");
+      let left = document.querySelector(".item3");
+      let right = document.querySelector(".item4");
+      let position = 0;
+      let position1 = 0;
+      let position2 = 0;
+      let position3 = 0;
+      up.onclick = function () {
+        setTimeout(upMove, 0);
+      };
+      down.onclick = function () {
+        setTimeout(downMove, 0);
+      };
+      right.onclick = function () {
+        setTimeout(rightMove, 0);
+      };
+      left.onclick = function () {
+        setTimeout(leftMove, 0);
+      };
+      function upMove() {
+        position += 100;
+        position1 -= 100;
+        div.style.bottom = position + "px";
+        div.style.top = position1 + "px";
+        console.log(window);
+      }
+      function downMove() {
+        position1 += 100;
+        position -= 100;
+        div.style.top = position1 + "px";
+        div.style.bottom = position + "px";
+      }
+      function leftMove() {
+        position2 += 100;
+        position3 -= 100;
+        div.style.left = position2 + "px";
+        div.style.right = position3 + "px";
+      }
+      function rightMove() {
+        position3 += 100;
+        position2 -= 100;
+        div.style.right = position3 + "px";
+        div.style.left = position2 + "px";
+      }
+    </script>
+  </body>
+</html>

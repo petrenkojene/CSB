@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style1.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <button>PUSH ME</button>
+    <script>
+      let arr = document.querySelectorAll(".item");
+      let btn = document.querySelector("button");
+      let count = 0;
+
+      btn.onclick = function () {
+        count++;
+        switch (count) {
+          case 1:
+            arr[0].style.backgroundColor = "red";
+            arr[1].style.backgroundColor = "green";
+            arr[2].style.backgroundColor = "green";
+            arr[3].style.backgroundColor = "green";
+            arr[4].style.backgroundColor = "green";
+
+            break;
+          case 2:
+            arr[1].style.backgroundColor = "red";
+            arr[0].style.backgroundColor = "green";
+            arr[2].style.backgroundColor = "green";
+            arr[3].style.backgroundColor = "green";
+            arr[4].style.backgroundColor = "green";
+
+            break;
+
+          case 3:
+            arr[2].style.backgroundColor = "red";
+            arr[0].style.backgroundColor = "green";
+            arr[1].style.backgroundColor = "green";
+            arr[3].style.backgroundColor = "green";
+            arr[4].style.backgroundColor = "green";
+
+            break;
+          case 4:
+            arr[3].style.backgroundColor = "red";
+            arr[0].style.backgroundColor = "green";
+            arr[2].style.backgroundColor = "green";
+            arr[1].style.backgroundColor = "green";
+            arr[4].style.backgroundColor = "green";
+
+            break;
+          case 5:
+            arr[4].style.backgroundColor = "red";
+            arr[0].style.backgroundColor = "green";
+            arr[2].style.backgroundColor = "green";
+            arr[1].style.backgroundColor = "green";
+            arr[3].style.backgroundColor = "green";
+
+            break;
+          default:
+            arr[3].style.backgroundColor = "green";
+            arr[0].style.backgroundColor = "green";
+            arr[2].style.backgroundColor = "green";
+            arr[1].style.backgroundColor = "green";
+            arr[4].style.backgroundColor = "green";
+
+            count = 0;
+
+            break;
+        }
+        console.log(count);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.container1{
+    
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+    height: 400px;
+
+    flex-direction: column;
+  
+}
+.item1, .item2, .item{
+    width: 300px;
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Box(Height, Width, Depth, Material) {
+        this.Height = Height;
+        this.Width = Width;
+        this.Depth = Depth;
+        this.Material = Material;
+        this.Volume = function () {
+          console.log(this.Height * this.Width * this.Depth);
+        };
+      }
+      Box.prototype.equals = function (otherObject) {
+        if (this.Material === otherObject.Material) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      let square1 = new Box(10, 10, 20, "gold");
+      let square2 = new Box(20, 10, 15, "silver");
+      let square3 = new Box(10, 10, 5, "gold");
+      console.log(square1.equals(square2));
+      console.log(square1.equals(square3));
+      console.log(square2.equals(square3));
+    </script>
+  </body>
+</html>

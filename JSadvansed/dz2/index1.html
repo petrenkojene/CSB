@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Human {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+      }
+      let arr = [];
+      arr.push(new Human("Ivan", 27));
+      arr.push(new Human("Nick", 42));
+      arr.push(new Human("Nastya", 12));
+      arr.push(new Human("Pavel", 120));
+      arr.push(new Human("Max", 0.3));
+      arr.sort(function (a, b) {
+        return a.age - b.age;
+      });
+
+      console.log(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 500px;
+        height: 500px;
+      }
+      .item1,
+      .item2,
+      .item3 {
+        width: 140px;
+        height: 140px;
+        float: left;
+      }
+      .item1 {
+        background-color: grey;
+        border-radius: 50%;
+        position: absolute;
+        left: 192px;
+        top: 33px;
+      }
+      .item2 {
+        background-color: grey;
+        border-radius: 50%;
+        position: absolute;
+        left: 192px;
+        top: 193px;
+      }
+      .item3 {
+        background-color: grey;
+        border-radius: 50%;
+        position: absolute;
+        left: 192px;
+        top: 354px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/439/439882.png" alt="" />
+    </div>
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    <script>
+      let red = document.querySelector(".item1");
+      let yellow = document.querySelector(".item2");
+      let green = document.querySelector(".item3");
+      let count = 0;
+
+      red.onclick = function () {
+        count++;
+        switch (count) {
+          case 1:
+            red.style.backgroundColor = "red";
+            yellow.style.backgroundColor = "grey";
+            green.style.backgroundColor = "grey";
+
+            break;
+          default:
+            red.style.backgroundColor = "grey";
+            count = 0;
+            break;
+        }
+      };
+      yellow.onclick = function () {
+        count++;
+        switch (count) {
+          case 1:
+            red.style.backgroundColor = "grey";
+            yellow.style.backgroundColor = "yellow";
+            green.style.backgroundColor = "grey";
+
+            break;
+          default:
+            yellow.style.backgroundColor = "grey";
+            count = 0;
+            break;
+        }
+      };
+      green.onclick = function () {
+        count++;
+        switch (count) {
+          case 1:
+            red.style.backgroundColor = "grey";
+            yellow.style.backgroundColor = "grey";
+            green.style.backgroundColor = "green";
+
+            break;
+          default:
+            green.style.backgroundColor = "grey";
+            count = 0;
+            break;
+        }
+      };
+    </script>
+  </body>
+</html>

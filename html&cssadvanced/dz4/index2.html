@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limonchik</title>
+    <link
+      rel="shortcut icon"
+      href="imgonline-com-ua-favicon-ytsVrY19WCQJ.ico"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        background-color: gray;
+      }
+      .gridding {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(6, 1fr);
+        background-color: gray;
+      }
+      img {
+        width: 200px;
+        margin: 20px;
+        height: 160px;
+        box-shadow: 0px 10px 15px 10px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridding">
+      <img src="https://wallpage.ru/imgbig/wallpapers_21653.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_18646.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_68845.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_86313.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_68880.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_32168.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_32201.jpg" alt="" />
+      <img
+        src="https://oboi.ws/wallpapers/11_9578_oboi_nyan_cat_1280x1024.jpg"
+        alt=""
+      />
+      <img src="https://wallpage.ru/imgbig/wallpapers_63633.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_30869.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_20140.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_19751.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_60612.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_79936.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_80704.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_72413.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_18773.jpg" alt="" />
+      <img src="https://wallpage.ru/imgbig/wallpapers_52483.jpg" alt="" />
+    </div>
+
+    <script>
+      var flag;
+      var elem = document.querySelectorAll("img");
+      for (let i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function () {
+          console.log("hell");
+          if (flag) {
+            elem.forEach((e) => (e.style.display = "block"));
+            elem[i].style.width = "200px";
+            elem[i].style.height = "160px";
+            elem[i].style.gridColumn = "auto/auto";
+            document.querySelector(".gridding").style.gridTemplateColumns =
+              "repeat(6,1fr)";
+          } else {
+            elem.forEach((e) => (e.style.display = "none"));
+            elem[i].style.width = "800px";
+            elem[i].style.height = "640px";
+            elem[i].style.display = "block";
+            document.querySelector(".gridding").style.gridTemplateColumns =
+              "repeat(7,1fr)";
+            elem[i].style.gridColumn = "4/5";
+          }
+          flag = !flag;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gridding{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        img{
+            width: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gridding">
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_21653.jpg" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_18646.jpg" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_68845.jpg" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_86313.jpg" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_68880.jpg" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="https://wallpage.ru/imgbig/wallpapers_32168.jpg" alt="" /><figcaption></figcaption></figure>
+      
+    </div>
+    <button>Get URL</button>
+<script>
+    let btn = document.querySelector('button').onclick = function(){
+    let fig = document.querySelectorAll('figcaption');
+    let img = document.querySelectorAll('img');
+    for(let i =0; i<fig.length;i++){
+        fig[i].innerHTML = img[i].src;
+       
+  (function (i) {
+    setTimeout(function () {
+      img[i].style.border = '5px solid red';
+    }, 1000 + i* 1000);
+  })(i);
+}
+        
+        }
+    
+
+</script>
+</body>
+</html>
