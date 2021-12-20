@@ -1,6 +1,115 @@
-img{
-    width: 40px;
+body{
+    
+    font-family: 'Montagu Slab', serif;
+    font-family: 'Shippori Antique', sans-serif;
 }
-div{
-    margin: 20px;
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.container_pizza{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    width: 293px;
+    border-radius: 5%;
+    margin-left: 50px;
+    
+}
+.container_pizza:hover, .elem:hover{
+   
+   
+    box-shadow: 0 0 15px rgb(92, 89, 89, 0.5);
+}
+.img_pizza{
+    
+    width: 293px;
+    height: 176px;
+    border-radius: 5%;
+}
+.img_pizza:hover{
+    width: 295px;
+}
+.descriptions{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-decoration: none;
+    color: #222;
+}
+.description_small{
+    font-size: 11px;
+    color: #4f4f4f;
+}
+.ingredients{
+    font-weight: 600;
+    color: #4f4f4f;
+    text-decoration: underline;
+}
+.button_collections{
+    width: 234px;
+    margin-top: 30px;
+    display: flex;
+    justify-self: auto;
+    border-radius:  50px 50px 50px 50px;
+    background-color: #f8f8f8;
+}
+.size_button{
+    border-radius:  50px 50px 50px 50px;
+    width: 90px;
+    height: 30px;
+    border: none;
+    background-color: #f8f8f8;
+
+}
+.active{
+    background-color: #4f4f4f;
+    color: #f8f8f8;
+}
+.add{
+    width: 115px;
+    height: 117px;
+    margin: 30px;
+    
+    
+}
+.container_additive{
+    display: none;
+    
+}
+.all_ingridients{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+}
+.choice{
+    
+    display: flex;
+    
+justify-content: center;
+}
+
+.minus, .plus, .counter{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    
+    text-align: center;
+
+    
+}
+.counter{
+    background-color: indianred;
+}
+.btn:active, .btn:focus, .btn{
+    border: none !important;
+    outline: none !important;
+}
+.elem{
+    width: 175px;
+    display: grid;
+    grid-template-rows: 140px 40px;
+    justify-content: start;
+    border: 1px solid #e0e0e0;
+    border-radius: 5%;
+    
 }

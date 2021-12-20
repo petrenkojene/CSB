@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@100&family=Shippori+Antique&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <div class="container_pizza">
+        <img src="img/pizza.jpg" alt="pizza" class="img_pizza">
+        <p class="descriptions">Пицца Пепперони с томатами</p>
+        <p class="description_small">Моцарелла, Пепперони, Помидоры, Соус Барбекю</p>
+        <a href="#ingridients" class="ingredients">Заменить ингредиенты</a>
+        <div class="button_collections">
+            <button class="size_button small active" value="1">Маленькая</button>
+            <button class="size_button average" value="2">Средняя</button>
+            <button class="size_button big" value="3">Большая</button>
+            
+        </div>
+        <p class="totalPrice"></p>
+
+    </div>
+    <div class="container_additive" name='ingridients'>
+        <div class="all_ingridients">
+        <div class="elem container_mozarela">
+            <div class="choice_ingr">
+        <img src="https://media.dominos.ua/__sized__/menu/product_toppings_image/2018/07/31/mozzarella--thumbnail-256x256.png" alt="" class="add mazarela">
+    </div>
+        <div class="choice">
+
+            <button class="btn minus mzrmin">&#8722</button><span class="counter mzrl">0</span><button class="btn plus mzrplus">&#43</button>
+        </div>
+    </div>
+    <div class="elem container_paperoni">
+        <img src="https://media.dominos.ua/__sized__/menu/product_toppings_image/2018/05/08/Pepp_302x302-thumbnail-256x256-70.jpg" alt="" class="add paperoni">
+        <div class="choice">
+
+            <button class="btn minus">&#8722</button><span class="counter">0</span><button class="btn plus">&#43</button>
+        </div>
+    </div>
+    <div class="elem container_tomato">
+        <img src="https://media.dominos.ua/__sized__/menu/product_toppings_image/2021/07/27/tomato_PNG125491_1-thumbnail-256x256.png" alt="" class="add tomato">
+        <div class="choice">
+
+            <button class="btn minus">&#8722</button><span class="counter">0</span><button class="btn plus">&#43</button>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+    <script src="add.js"></script>
+</body>
+</html>
